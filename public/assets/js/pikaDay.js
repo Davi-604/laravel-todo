@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             format: 'YYYY-MM-DD',
             defaultDate: new Date(currentDate),
             setDefaultDate: true,
+            position: 'bottom-right',
             i18n: {
                 previousMonth: 'Previous Month',
                 nextMonth: 'Next Month',
@@ -48,30 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 url.searchParams.set('date', formattedDate);
                 window.location.href = url.toString();
             },
-
-            onOpen: function () {
-                const pickerElement = document.querySelector('.pika-single');
-                console.log(pickerElement);
-                if (pickerElement) {
-                    pickerElement.classList.add(
-                        'fixed',
-                        'top-0',
-                        'left-0',
-                        'z-50',
-                        'bg-white',
-                        'text-black',
-                        'shadow-lg',
-                        'rounded-lg',
-                        'p-4',
-                        'max-w-full',
-                        'w-[90%]',
-                    );
-                }
-            },
+        });
+        spanElement.addEventListener('click', () => {
+            picker.show();
         });
     }
-
-    spanElement.addEventListener('click', () => {
-        picker.show();
-    });
 });

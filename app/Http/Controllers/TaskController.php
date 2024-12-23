@@ -56,7 +56,8 @@ class TaskController extends Controller
         $res = $this->taskService->createTask($req->user()->id, $data);
 
         if ($res) {
-            return \redirect(route('home'));
+            $res['due_date'] = date('Y-m-d', strtotime($res['due_date']));
+            return redirect()->route('home', ['date' => $res['due_date']]);
         }
 
         return \redirect(route('task.create'))
@@ -111,7 +112,8 @@ class TaskController extends Controller
         $updatedTask = $this->taskService->updateTask($req->user()->id, $id, $data);
 
         if ($updatedTask) {
-            return \redirect(route('home'));
+            $updatedTask['due_date'] = date('Y-m-d', \strtotime($updatedTask['due_date']));
+            return redirect()->route('home', ['date' => $updatedTask['due_date']]);
         }
 
         return \redirect(route('category.edit', ['id' => $id]))
@@ -126,9 +128,10 @@ class TaskController extends Controller
         $deletedTask = $this->taskService->deleteTask($req->user()->id, $id);
 
         if ($deletedTask) {
-            return \redirect(route('home'));
+            $deletedTask['due_date'] = date('Y-m-d', strtotime($deletedTask['due_date']));
+            return redirect()->route('home', ['date' => $deletedTask['due_date']]);
         }
 
-        return \redirect(route('home'));
+        return redirect()->route('home');
     }
 }

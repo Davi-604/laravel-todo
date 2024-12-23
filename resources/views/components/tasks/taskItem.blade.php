@@ -1,6 +1,6 @@
 <div
-    class="task {{ $done === 1 ? 'done_task' : 'pending_task' }} mt-10 flex flex-col items-start gap-4 rounded-lg bg-indigo-800 p-3 transition-all ease-in hover:bg-indigo-900 lg:flex-row lg:p-5">
-    <div class="flex flex-1 items-center">
+    class="task {{ $done === 1 ? 'done_task' : 'pending_task' }} mt-10 flex flex-col items-start gap-4 rounded-lg bg-indigo-800 p-3 transition-all ease-in hover:bg-indigo-900 lg:flex-row lg:items-center lg:justify-between lg:p-5">
+    <div class="flex w-full items-center">
         <label class="flex items-center gap-1 lg:gap-3">
             <input type="checkbox" class="size-5 cursor-pointer" {{ $done ? 'checked' : '' }} onchange="checkTask(this)"
                 data-id="{{ $id }}" />
@@ -9,8 +9,8 @@
             </div>
         </label>
     </div>
-    <div class="ml-3 flex flex-1 items-center">
-        <div class="mr-3 h-5 w-5 rounded-full" style="background-color: {{ $priorityColor }}"></div>
+    <div class="ml-3 flex w-full items-center">
+        <div class="mr-3 size-5 rounded-full" style="background-color: {{ $priorityColor }}"></div>
         <p class="text-sm font-semibold text-gray-100">
             {{ $priorityLabel }}
         </p>

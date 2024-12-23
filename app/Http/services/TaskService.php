@@ -64,14 +64,10 @@ class TaskService
     {
 
         $task = $this->getOneTask($userId, $id);
-        if (isset($task)) {
+        if ($task) {
             $task->delete();
-            return true;
+            return $task;
         }
-
-
-
-
 
         return false;
     }

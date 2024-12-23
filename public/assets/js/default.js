@@ -5,23 +5,25 @@ function cleanError(element) {
     }
 }
 
-let showIconBtn = document.getElementById('show_btn');
-if (showIconBtn) {
-    showIconBtn.addEventListener('click', () => {
-        let input = showIconBtn.previousElementSibling;
+let showIconBtns = document.querySelectorAll('.show_btn');
+console.log(showIconBtns);
+if (showIconBtns) {
+    showIconBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            let input = btn.previousElementSibling;
 
-        console.log(input);
-        let inputCurrentType = input.getAttribute('type');
+            let inputCurrentType = input.getAttribute('type');
 
-        if (inputCurrentType === 'password') {
-            showIconBtn.classList.remove('fa-eye');
-            showIconBtn.classList.add('fa-eye-slash');
-            input.setAttribute('type', 'text');
-        } else {
-            showIconBtn.classList.remove('fa-eye-slash');
-            showIconBtn.classList.add('fa-eye');
-            input.setAttribute('type', 'password');
-        }
+            if (inputCurrentType === 'password') {
+                btn.classList.remove('fa-eye');
+                btn.classList.add('fa-eye-slash');
+                input.setAttribute('type', 'text');
+            } else {
+                btn.classList.remove('fa-eye-slash');
+                btn.classList.add('fa-eye');
+                input.setAttribute('type', 'password');
+            }
+        });
     });
 }
 

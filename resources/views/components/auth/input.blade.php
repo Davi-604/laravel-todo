@@ -7,7 +7,7 @@
                 type="{{ $type ?? 'text' }}" placeholder="{{ $placeholder ?? '' }}" {{ $required ? 'required' : '' }}
                 onchange="cleanError(this)" />
             @if (!empty($type) && $type === 'password')
-                <i id="show_btn" class="fa-regular fa-eye fa-xl -ml-9 cursor-pointer text-black/80"></i>
+                <i class="show_btn fa-regular fa-eye fa-xl -ml-9 cursor-pointer text-black/80"></i>
             @endif
         </div>
     </label>

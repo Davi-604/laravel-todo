@@ -31,7 +31,7 @@
             </nav>
             <main class="p-5">
                 @yield('content')
-                <div class="block lg:hidden">
+                <div class="mx-auto flex justify-center lg:hidden">
                     @yield('routeBtn')
                 </div>
             </main>

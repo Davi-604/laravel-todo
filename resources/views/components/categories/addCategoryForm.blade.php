@@ -37,7 +37,6 @@
         <div class="mb-10 flex items-center justify-center">
             @include('components.default.linkBtn', [
                 'label' => 'Voltar',
-                'url' => 'category.index',
             ])
             @include('components.auth.submitBtn', [
                 'label' => 'Criar',

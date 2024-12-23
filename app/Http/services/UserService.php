@@ -28,7 +28,7 @@ class UserService
     {
         $user = User::create($data);
 
-        $categoryService = new CategoryService();
+        $categoryService = new CategoryService($this);
         $categoryService->createDefaultCategories($user->id);
 
         return $user;
