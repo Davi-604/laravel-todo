@@ -1,66 +1,119 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# To-do com categorias 📋
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Projeto desenvolvido com:
 
-## About Laravel
+<div style="display:inline_block">
+    <img align="center" src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+    <img align="center" src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+    <img align="center" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TAILWINDCSS">
+</div>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Descrição do Projeto 🚀
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Esse projeto Laravel consiste em um página de **to-do list** onde o usuário pode se cadastrar, gerenciar e personalizar as suas própias categorias e criar tarefas associadas a elas.
 
-## Learning Laravel
+O projeto segue uma estrutura MVC auxiliada pelo Laravel que segue boas práticas de código como o SOLID, isso permite uma maior organização e escalabilidade do projeto como um todo.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Funcionalidades principais 🧾
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **Cadastro de usuário**: Garante que cada usuário terá as suas própias categorias e tarefas.
+-   **CRUD completo para as tarefas e categorias**: O projeto fornece o toda a estrutura necessária para a organização das tarefas e categorias do usuário.
+-   **Gráfico de progresso**: Um gráfico dinâmico que mostra para o usuário todo o progresso do dia diacordo com as suas tarefas
 
-## Laravel Sponsors
+-   **Interface Responsiva**: Desenvolvida com **TailwindCSS**, garantindo uma experiência fluida em qualquer tela.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Como executar o projeto 🖥️
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Pré-requisitos:
 
-## Contributing
+-   PHP instalado (versão 8 ou superior)
+-   Servidor Web compatível com o PHP como o Apache
+-   Composer para as depedências do PHP
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   Gerenciador de pacotes npm ou yarn
+-   Banco de dados relacional configurado
 
-## Code of Conduct
+### Passo a passo:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Clone o repositório:
 
-## Security Vulnerabilities
+    ```bash
+    git clone https://github.com/Davi-604/laravel-todo.git
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    <br/>
 
-## License
+2. Instale as depedências do back-end:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    composer install
+    ```
+
+    <br/>
+
+3. Configure o aquivo .env:
+
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nome_do_banco
+    DB_USERNAME=seu_usuario
+    DB_PASSWORD=sua_senha
+    ```
+
+    <br/>
+
+4. Gere uma chave única para o Laravel:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+    <br/>
+
+5. Execute as migrações e seeders:
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+    <br/>
+
+6. Instale as dependências do frontend:
+
+    ```bash
+    npm install
+    ```
+
+    <br/>
+
+7. Inicie o servidor local:
+    ```bash
+    npm run dev
+    ```
+    <br/>
+
+---
+
+## Links 🌐
+
+<a href="https://www.linkedin.com/posts/davicarvalhodev604_laravel-php-programaaexaeto-activity-7277421391505686528-4PIX?utm_source=share&utm_medium=member_desktop" target='_blank'>
+    Postagem no linkedIn
+</a>
+<br/><br/>
+<a href="https://youtu.be/BfkD60c8nZ4?si=0bU26cEGPericOPK" target='_blank'>
+    Vídeo no youtube
+</a>
+
+---
+
+## Créditos 🙌
+
+Este projeto foi baseado no curso da [B7web](https://b7web.com.br), com adaptações e melhorias realizadas por mim para abrangir mais funcionalidades e testar os meus conhecimentos.
